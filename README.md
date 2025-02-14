@@ -1,16 +1,12 @@
-```
 # YT Downloader com Efeitos de Áudio 🎶
-Aplicativo web para download de vídeos do YouTube com efeitos de áudio inovadores, incluindo 8D e Slowed + Reverb.
 
----
+Aplicativo web para download de vídeos do YouTube com efeitos de áudio inovadores, incluindo 8D e Slowed + Reverb.
 
 ## 🚀 Requisitos do Sistema
 - **Node.js** versão 20.x ou superior
 - **npm** (geralmente vem com o Node.js)
 - **Python** (para yt-dlp)
 - **FFmpeg** para processamento de áudio
-
----
 
 ## 📥 Instalação
 
@@ -20,7 +16,6 @@ Abra o PowerShell e digite o seguinte comando para clonar o repositório:
 ```powershell
 git clone https://github.com/Anthony-Richard1/site-8d.git
 cd site-8d
-```
 
 ### 2. Instale o FFmpeg
 
