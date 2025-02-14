@@ -1,16 +1,20 @@
----
-
+```markdown
 # YT Downloader com Efeitos de Áudio 🎶
 Aplicativo web para download de vídeos do YouTube com efeitos de áudio inovadores, incluindo 8D e Slowed + Reverb.
 
-🚀 Requisitos do Sistema  
-- Node.js versão 20.x ou superior  
-- npm (geralmente vem com o Node.js)  
-- Python (para yt-dlp)  
-- FFmpeg para processamento de áudio  
+---
 
-📥 **Instalação**  
-1. **Clone o Repositório**  
+## 🚀 Requisitos do Sistema
+- **Node.js** versão 20.x ou superior
+- **npm** (geralmente vem com o Node.js)
+- **Python** (para yt-dlp)
+- **FFmpeg** para processamento de áudio
+
+---
+
+## 📥 Instalação
+
+### 1. Clone o Repositório
 Abra o PowerShell e digite o seguinte comando para clonar o repositório:
 
 ```powershell
@@ -18,30 +22,36 @@ git clone https://github.com/Anthony-Richard1/site-8d.git
 cd site-8d
 ```
 
-2. **Instale o FFmpeg**  
-🖥️ **Windows:**  
-Baixe o FFmpeg [aqui](https://ffmpeg.org/download.html).  
-Extraia os arquivos baixados.  
-Adicione o caminho da pasta bin ao PATH do sistema:
+### 2. Instale o FFmpeg
 
-Abra o PowerShell como Administrador e digite:
-```powershell
-[System.Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\caminho\para\ffmpeg\bin", [System.EnvironmentVariableTarget]::Machine)
-```
-Substitua `C:\caminho\para\ffmpeg\bin` pelo caminho real onde você extraiu o FFmpeg.
+- 🖥️ **Windows:**  
+  Baixe o FFmpeg [aqui](https://ffmpeg.org/download.html).  
+  Extraia os arquivos baixados.  
+  Adicione o caminho da pasta `bin` ao `PATH` do sistema:
 
-🐧 **Linux:**
-```bash
-sudo apt update
-sudo apt install ffmpeg
-```
+  Abra o PowerShell como Administrador e digite:
 
-🍏 **macOS:**
-```bash
-brew install ffmpeg
-```
+  ```powershell
+  [System.Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\caminho\para\ffmpeg\bin", [System.EnvironmentVariableTarget]::Machine)
+  ```
 
-3. **Configure o Backend**  
+  Substitua `C:\caminho\para\ffmpeg\bin` pelo caminho real onde você extraiu o FFmpeg.
+
+- 🐧 **Linux:**
+
+  ```bash
+  sudo apt update
+  sudo apt install ffmpeg
+  ```
+
+- 🍏 **macOS:**
+
+  ```bash
+  brew install ffmpeg
+  ```
+
+### 3. Configure o Backend
+
 No PowerShell, navegue até a pasta do backend e instale as dependências:
 
 ```powershell
@@ -61,7 +71,8 @@ Inicie o servidor:
 npm run dev
 ```
 
-4. **Configure o Frontend**  
+### 4. Configure o Frontend
+
 Abra outro terminal (PowerShell), navegue até a pasta raiz e instale as dependências:
 
 ```powershell
@@ -75,12 +86,19 @@ Inicie o servidor de desenvolvimento:
 npm run dev
 ```
 
-🌐 **Acesso**  
-Frontend: [http://localhost:5173](http://localhost:5173)  
-Backend: [http://localhost:3000](http://localhost:3000)
+---
 
-🛠️ **Solução de Problemas**  
-**Erro de FFmpeg Não Encontrado**  
+## 🌐 Acesso
+
+- **Frontend:** [http://localhost:5173](http://localhost:5173)
+- **Backend:** [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🛠️ Solução de Problemas
+
+### Erro de FFmpeg Não Encontrado
+
 Verifique se o FFmpeg está instalado corretamente:
 
 ```powershell
@@ -89,26 +107,30 @@ ffmpeg -version
 
 Se não aparecer a versão, tente os seguintes passos:
 
-Limpe o cache do npm:
+1. Limpe o cache do npm:
 
-```powershell
-npm cache clean --force
-```
+   ```powershell
+   npm cache clean --force
+   ```
 
-Delete as pastas `node_modules` e o arquivo `package-lock.json`:
+2. Delete as pastas `node_modules` e o arquivo `package-lock.json`:
 
-```powershell
-rm -rf node_modules package-lock.json
-```
+   ```powershell
+   rm -rf node_modules package-lock.json
+   ```
 
-Reinstale as dependências:
+3. Reinstale as dependências:
 
-```powershell
-npm install
-```
+   ```powershell
+   npm install
+   ```
 
-🔧 **Configurações Adicionais**  
-**Variáveis de Ambiente (.env)**  
+---
+
+## 🔧 Configurações Adicionais
+
+### Variáveis de Ambiente (.env)
+
 Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 
 ```env
@@ -116,7 +138,8 @@ PORT=3000
 NODE_ENV=development
 ```
 
-**Configuração do CORS**  
+### Configuração do CORS
+
 Se necessário, altere as configurações de CORS no arquivo `backend/src/server.js`:
 
 ```javascript
@@ -127,7 +150,10 @@ app.use(cors({
 }));
 ```
 
-📦 **Estrutura do Projeto**  
+---
+
+## 📦 Estrutura do Projeto
+
 ```bash
 site-8d/
 ├── backend/  # Servidor Node.js
@@ -145,73 +171,90 @@ site-8d/
 └── package.json
 ```
 
-🔐 **Segurança**  
-- Mantenha Node.js e todas as dependências atualizadas.
+---
+
+## 🔐 Segurança
+
+- Mantenha **Node.js** e todas as dependências atualizadas.
 - Nunca compartilhe seu arquivo `.env`.
 - Configure corretamente as políticas de CORS no servidor.
 - Limite o tamanho dos uploads no backend para evitar sobrecarga.
 
-📝 **Scripts Disponíveis**  
-**Backend**  
-Inicie o servidor em modo desenvolvimento:
+---
 
-```powershell
-npm run dev
-```
+## 📝 Scripts Disponíveis
 
-Inicie o servidor em modo produção:
+### Backend
 
-```powershell
-npm run start
-```
+- Inicie o servidor em modo desenvolvimento:
 
-**Frontend**  
-Inicie o servidor de desenvolvimento:
+  ```powershell
+  npm run dev
+  ```
 
-```powershell
-npm run dev
-```
+- Inicie o servidor em modo produção:
 
-Crie a build para produção:
+  ```powershell
+  npm run start
+  ```
 
-```powershell
-npm run build
-```
+### Frontend
 
-Visualize a build de produção:
+- Inicie o servidor de desenvolvimento:
 
-```powershell
-npm run preview
-```
+  ```powershell
+  npm run dev
+  ```
 
-🤝 **Contribuindo**  
-Faça um fork do projeto.  
-Crie uma branch para sua feature:
+- Crie a build para produção:
 
-```powershell
-git checkout -b feature/AmazingFeature
-```
+  ```powershell
+  npm run build
+  ```
 
-Commit suas mudanças:
+- Visualize a build de produção:
 
-```powershell
-git commit -m 'Add some AmazingFeature'
-```
-
-Faça o push para a branch:
-
-```powershell
-git push origin feature/AmazingFeature
-```
-
-Abra um Pull Request.
-
-📄 **Licença**  
-Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
-
-📧 **Contato**  
-Anthony Richard - GitHub
-
-Link do Projeto: [https://github.com/Anthony-Richard1/site-8d](https://github.com/Anthony-Richard1/site-8d)
+  ```powershell
+  npm run preview
+  ```
 
 ---
+
+## 🤝 Contribuindo
+
+1. Faça um fork do projeto.
+2. Crie uma branch para sua feature:
+
+   ```powershell
+   git checkout -b feature/AmazingFeature
+   ```
+
+3. Commit suas mudanças:
+
+   ```powershell
+   git commit -m 'Add some AmazingFeature'
+   ```
+
+4. Faça o push para a branch:
+
+   ```powershell
+   git push origin feature/AmazingFeature
+   ```
+
+5. Abra um Pull Request.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença **MIT**. Consulte o arquivo `LICENSE` para mais detalhes.
+
+---
+
+## 📧 Contato
+
+**Anthony Richard** - GitHub  
+[https://github.com/Anthony-Richard1/site-8d](https://github.com/Anthony-Richard1/site-8d)
+
+---
+```
